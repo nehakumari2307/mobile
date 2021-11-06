@@ -9,11 +9,59 @@ body{
   padding: 0;
 }
 
-/* header, footer {
-  background-color: #ffa500;
-  text-align: center;
-  min-width: 500px;
-} */
+.background {
+  background-color: black;
+}
+
+.container header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: sticky;
+  background-color: white;
+  z-index: 99;
+  top: 0px;
+}
+
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+.logo-title {
+  animation-name: slidein;
+  animation-duration: 5s;
+  /* padding: 1rem 0rem; */
+}
+
+.main-title {
+  width: 425px;
+  padding: 1rem 0rem;
+}
+
+
+@keyframes slidein {
+  from {
+    width: 60px;
+    opacity: 0;
+  }
+  to {
+    width: 500px;
+    opacity: 1;
+  }
+}
 
 nav ul{
   list-style-type: none;
@@ -25,24 +73,43 @@ nav li{
 }
 
 nav{
-  background-color: #ddd;
-  padding: 25px 0;    
-  text-align: left; 
-  font-size: 1rem; 
+  padding: 5px 5px;    
+  text-align: center; 
+  /* font-size: 1rem;  */
+  border-bottom: 3px solid #212121;
+  font-family: "Alegreya Sans SC", serif;
 }
 
 nav a{
-  color: black;
+  /* color: black;
+  font-weight: bold;
+  text-decoration: none; */
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
+  background-color: #000;
 }
+
+nav a:visited {
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+}
+
 nav a:focus {
   outline-color: transparent;
 }
 
 nav a:hover {
   text-decoration: underline;
+  /* text-transform: uppercase; */
+  background-color: #fff;
+  color: #000;
 }
+
+
+
+
 
 #youtube-container {
   display: grid;
@@ -59,8 +126,18 @@ nav a:hover {
   overflow: hidden;
 }
 
+h1 {
+  font-family: Poppins, serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: left;
+  color: #40423f;
+  padding: 10px 0px 10px 10px;
+}
+
 h2 {
-  font-family: Poppins;
+  font-family: 'Work Sans', serif;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -77,9 +154,7 @@ img {
   border: #eb842c 3px solid;
   margin: 10px;
   border-radius: 20px;
-}
-.youtube {
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 20px 0 rgb(0 0 0 / 50%);
 }
 
 .a {
@@ -116,7 +191,8 @@ img {
 }
 
 .description {
-  font-family: Work Sans;
+  /* font-family: 'Work Sans'; */
+  font-family: 'Pangolin', cursive;
   font-size: 25px;
   font-weight: bolder;
   line-height: 1.29;
@@ -130,20 +206,19 @@ img {
   font-family: 'Poppins';
 }
 
-.logo {
-  width: 115px;
-  height: 21.1px;
-  object-fit: contain;
-  padding: 20px;
-}
-
 .container {
   /* min-width: 500px; */
   margin: auto;
 }
 
 footer {
-  margin-top: 44px;
+  /* margin-top: 44px; */
+  margin-top: 3rem;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-family: "Alegreya Sans SC", serif;
 }
 
 /* Podcast page */
@@ -197,8 +272,8 @@ p:hover {
   margin: 0px 10px;
   padding: 0px;
   text-align: center;
-  color: #1e73be;
-  font-family: emoji;
+  color: #085ba5;
+  font-family: 'Pangolin', cursive;;
   font-size: 21px;
 }
 
@@ -222,17 +297,24 @@ p:hover {
   }
 }
 
-/* movie webpage */
+/* shows webpage */
 
 .scrolling-wrapper {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-wrapper:focus, .scrolling-wrapper:hover {
+  box-shadow: 0 1px 20px 0 rgb(0 0 0 / 50%);
 }
 
 .scrolling-wrapper .card {
   flex: 0 0 auto;
+}
+
+#shows-container h1{ 
+  font-size: 1.5rem;
 }
 
 .card {
@@ -241,6 +323,9 @@ p:hover {
   margin: 10px;
   border: 2px solid black;
   overflow: hidden;
+}
+.card:focus {
+  
 }
 .card h2 {
   padding: 10px 0px 10px 10px;
@@ -266,9 +351,19 @@ p:hover {
 
 .app-text{
   background-color: rgba(255, 255, 255, .8);
-  /* border: 10px solid black;*/
   padding: 5px;
   align-self: center; 
+}
+
+#app-container .description {
+  font-size: 1.1rem;
+  border-bottom: none;
+  color: #000;
+  padding: 0px 5px 0px 5px;
+}
+
+#app-container h1 {
+  color: #000;
 }
 
 .first-image{
