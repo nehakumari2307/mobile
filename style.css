@@ -149,6 +149,12 @@ footer {
   font-family: "Alegreya Sans SC", serif;
 }
 
+footer img {
+  width: 10vw;
+  height: auto;
+  background: white;
+}
+
 /* youtube channel */
 
 #youtube-container {
