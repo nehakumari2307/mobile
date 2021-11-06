@@ -335,10 +335,8 @@ p:hover {
 /* game app*/
 
 #app-container{
-  /* Requirement 5 code here*/
   display: grid;
   margin: auto;
-  /* width: 100vw; */
   grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
   row-gap: 15px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
